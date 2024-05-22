@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="557.0" prefWidth="869.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep12.delete_any_files.controller.MainController">
+   <children>
+      <VBox layoutX="101.0" layoutY="110.0" prefHeight="210.0" prefWidth="678.0">
+         <children>
+            <HBox prefHeight="70.0" prefWidth="678.0" spacing="15.0">
+               <children>
+                  <Label prefHeight="35.0" prefWidth="158.0" text="Select Folder: ">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtPath" prefHeight="35.0" prefWidth="377.0" />
+                  <Button fx:id="btnBrowse" mnemonicParsing="false" onAction="#btnBrowseOnAction" prefHeight="35.0" prefWidth="113.0" style="-fx-background-color: #127c3b;" text="Browse" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+               <children>
+                  <Label prefHeight="35.0" prefWidth="158.0" text="Enter File Extention: ">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtExtension" prefHeight="35.0" prefWidth="205.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+               <children>
+                  <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #011eae;" text="DELETE" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Button>
+                  <Button fx:id="btnExit" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnExitOnAction" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #bc0000;" text="EXIT" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
