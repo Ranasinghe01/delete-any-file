@@ -12,6 +12,7 @@ import java.util.Arrays;
 
 public class MainController {
 
+    public TextField txtCustomText;
     @FXML
     private Button btnBrowse;
 
@@ -55,10 +56,8 @@ public class MainController {
             for (File file : folderContent) {
                 if (file.isDirectory()) {
                     fileWalker(file);
+
                 } else {
-                    if (folderContent.length == 0) {
-                        new Alert(Alert.AlertType.INFORMATION, "Successfully Deleted").show();
-                    }
                     deleteFile(file);
                 }
             }
@@ -70,8 +69,9 @@ public class MainController {
 
     private void deleteFile(File file) {
         String extension = txtExtension.getText();
+        String custom_text = txtCustomText.getText();
 
-        if (file.getName().endsWith("." + extension)) {
+        if (file.getName().endsWith(custom_text + "." + extension)) {
             file.delete();
         }
     }
@@ -80,6 +80,7 @@ public class MainController {
     void btnDeleteOnAction(ActionEvent event) {
         File path = new File(txtPath.getText());
         fileWalker(path);
+        new Alert(Alert.AlertType.INFORMATION, "Successfully Deleted").show();
     }
 
     @FXML
